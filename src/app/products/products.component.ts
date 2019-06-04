@@ -7,7 +7,7 @@ import { Product } from '../products/product';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  displayedColumns: string[] = ['prod_name', 'prod_price'];
+  displayedColumns: string[] = ['id','prod_name','prod_img','prod_categories', 'prod_price','updated_at'];
   data: Product[] = [];
   isLoadingResults = true;
   constructor(private api: ApiService) { }
