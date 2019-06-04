@@ -10,14 +10,14 @@
       <form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
           <mat-form-field class="example-full-width">
               <input matInput placeholder="Product ID" formControlName="id"
-                     [errorStateMatcher]="matcher">
+                     [errorStateMatcher]="matcher" [(ngModel)]="id">
               <mat-error>
                 <span *ngIf="!productForm.get('id').valid && productForm.get('id').touched">Please enter Product ID</span>
               </mat-error>
             </mat-form-field>
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Product Name" formControlName="prod_name"
-                 [errorStateMatcher]="matcher">
+                 [errorStateMatcher]="matcher" [(ngModel)]="prod_name">
           <mat-error>
             <span *ngIf="!productForm.get('prod_name').valid && productForm.get('prod_name').touched">Please enter Product Name</span>
           </mat-error>
@@ -31,27 +31,27 @@
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Product Image" formControlName="prod_img"
-                   [errorStateMatcher]="matcher">
+                   [errorStateMatcher]="matcher" [(ngModel)]="prod_img">
             <mat-error>
               <span *ngIf="!productForm.get('prod_img').valid && productForm.get('prod_img').touched">Please Upload Product Image</span>
             </mat-error>
           </mat-form-field>
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Product Price" formControlName="prod_price"
-                 [errorStateMatcher]="matcher">
+                 [errorStateMatcher]="matcher" [(ngModel)]="prod_price">
           <mat-error>
             <span *ngIf="!productForm.get('prod_price').valid && productForm.get('prod_price').touched">Please enter Product Price</span>
           </mat-error>
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Product Date" formControlName="updated_at"
-                   [errorStateMatcher]="matcher">
+                   [errorStateMatcher]="matcher" [(ngModel)]="updated_at">
             <mat-error>
               <span *ngIf="!productForm.get('updated_at').valid && productForm.get('updated_at').touched">Please enter Product Date</span>
             </mat-error>
           </mat-form-field>
         <div class="button-row">
-          <button type="submit" [disabled]="!productForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+          <button type="submit"  mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
         </div>
       </form>
     </mat-card>
