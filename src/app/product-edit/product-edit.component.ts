@@ -54,7 +54,7 @@ export class ProductEditComponent implements OnInit {
     this.getProduct(this.route.snapshot.params['id']);
     this.productForm = this.formBuilder.group({
     'prod_name' : [null, Validators.required],
-    'prod_desc' : [null, Validators.required],
+    'prod_catorgries' : [null, Validators.required],
     'prod_price' : [null, Validators.required]
   });
   }
