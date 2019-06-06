@@ -51,7 +51,7 @@
             </mat-error>
           </mat-form-field>
         <div class="button-row">
-          <button type="submit"  mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+          <button type="submit" [disabled]="!productForm.valid"  mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
         </div>
       </form>
     </mat-card>
